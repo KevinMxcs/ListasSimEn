@@ -8,10 +8,9 @@ public class App {
 		lista.insertaEntreNodos("R", "A");
 		lista.imprimir();
 		System.out.print(lista);
-        System.out.println("Buscando el nodo O y entregando su referencia");
             System.out.println(lista.nodoBuscValor("O"));
-        System.out.println("Buscando un nodo por su campo clave e insertar un nuevo nodo después de él.");
         lista.insertDespDe("H", "Z");
-        System.out.println("Intercambiando un nodo por otro buscado");
+        lista.intercambiarNodos("O", "H");
+        	lista.imprimir();
     }
 }
