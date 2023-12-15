@@ -47,8 +47,7 @@ public class Lista {
 
 		//boolean NodoNoEncontrado = true;
 
-		while ( (temp2 != null) 
-				&& temp2.name.equals(buscado) == false ) {	
+		while ( (temp2 != null) && temp2.name.equals(buscado) == false ) {	
 		         temp2 = temp2.next;
 		}
 
@@ -90,15 +89,18 @@ public class Lista {
 	//Borrar cualquier nodo que no sea el primero
 	public boolean borrarCualquierNodo(String buscado){
 		Nodo temp = this.top;
+		Nodo temp2 = null;
 
 		while ( (temp != null) 
 				&& temp.name.equals(buscado) == false ) {	
+				temp2 = temp;
 		         temp = temp.next;
 		}
 
 		if (temp != null){  //Nodo buscado se encontró
-			temp.next = temp.next.next;
+			temp2.next = temp.next;
 			temp = null;
+			temp2 = null;
 			
 			return true;
 		}
@@ -162,10 +164,12 @@ public class Lista {
                 // El nodo a intercambiar es el primer nodo (cabeza)
                 nuevoNodo.next = actual.next;
                 top = nuevoNodo;
+				actual = null;
             } else {
                 // El nodo a intercambiar no es el primer nodo
                 nuevoNodo.next = actual.next;
                 nodoAnt.next = nuevoNodo;
+				actual = null;
             }
         }
         

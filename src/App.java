@@ -8,9 +8,11 @@ public class App {
 		lista.insertaEntreNodos("R", "A");
 		lista.imprimir();
 		System.out.print(lista);
-            System.out.println(lista.nodoBuscValor("O"));
+            System.out.println(lista.nodoBuscValor("H"));
         lista.insertDespDe("H", "Z");
-        lista.intercambiarNodos("O", "H");
+        lista.intercambiarNodos("O", "Q");
         	lista.imprimir();
+            lista.borrarCualquierNodo("H");
+            lista.imprimir();
     }
 }
